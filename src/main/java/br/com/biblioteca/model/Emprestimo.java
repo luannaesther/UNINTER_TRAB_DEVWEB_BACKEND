@@ -14,7 +14,8 @@ public class Emprestimo {
     @ManyToOne(optional = false)
     private Livro livro;
 
-    private String nomeUsuario;
+    @ManyToOne(optional = false)
+    private Cliente cliente;
 
     private LocalDate dataEmprestimo;
 
@@ -38,12 +39,12 @@ public class Emprestimo {
         this.livro = livro;
     }
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public LocalDate getDataEmprestimo() {

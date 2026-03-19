@@ -2,6 +2,8 @@ package br.com.biblioteca.controller;
 
 import br.com.biblioteca.model.Emprestimo;
 import br.com.biblioteca.model.Livro;
+import br.com.biblioteca.model.Cliente;
+import br.com.biblioteca.repository.ClienteRepository;
 import br.com.biblioteca.repository.EmprestimoRepository;
 import br.com.biblioteca.repository.LivroRepository;
 import org.springframework.http.HttpStatus;
@@ -17,21 +19,31 @@ public class EmprestimoController {
 
     private final EmprestimoRepository emprestimoRepository;
     private final LivroRepository livroRepository;
+    private final ClienteRepository clienteRepository;
 
-    public EmprestimoController(EmprestimoRepository emprestimoRepository, LivroRepository livroRepository) {
+    public EmprestimoController(EmprestimoRepository emprestimoRepository,
+                                LivroRepository livroRepository,
+                                ClienteRepository clienteRepository) {
         this.emprestimoRepository = emprestimoRepository;
         this.livroRepository = livroRepository;
+        this.clienteRepository = clienteRepository;
     }
 
     @PostMapping
     public ResponseEntity<?> criar(@RequestBody Emprestimo emprestimo) {
-        if (emprestimo.getLivro() == null || emprestimo.getLivro().getId() == null || emprestimo.getNomeUsuario() == null) {
-            return ResponseEntity.badRequest().body("Campos obrigatórios: livro.id, nomeUsuario");
+        if (emprestimo.getLivro() == null || emprestimo.getLivro().getId() == null
+                || emprestimo.getCliente() == null || emprestimo.getCliente().getId() == null) {
+            return ResponseEntity.badRequest().body("Campos obrigatorios: livro.id, cliente.id");
         }
 
         Livro livro = livroRepository.findById(emprestimo.getLivro().getId()).orElse(null);
         if (livro == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Livro não encontrado");
+        }
+
+        Cliente cliente = clienteRepository.findById(emprestimo.getCliente().getId()).orElse(null);
+        if (cliente == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cliente nao encontrado");
         }
 
         if (!livro.isDisponivel()) {
@@ -42,6 +54,7 @@ public class EmprestimoController {
         livroRepository.save(livro);
 
         emprestimo.setLivro(livro);
+        emprestimo.setCliente(cliente);
         if (emprestimo.getDataEmprestimo() == null) {
             emprestimo.setDataEmprestimo(LocalDate.now());
         }
