@@ -1,0 +1,7 @@
+br\com\biblioteca\model\Livro.class
+br\com\biblioteca\controller\EmprestimoController.class
+br\com\biblioteca\repository\LivroRepository.class
+br\com\biblioteca\BibliotecaApplication.class
+br\com\biblioteca\model\Emprestimo.class
+br\com\biblioteca\controller\LivroController.class
+br\com\biblioteca\repository\EmprestimoRepository.class
