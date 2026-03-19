@@ -1,4 +1,4 @@
-# Trabalho Desenvolvimento Web Back-end - Biblioteca
+# Trabalho Desenvolvimento Web Back-end
 
 API REST desenvolvida em Java com Spring Boot para gerenciamento de clientes, livros e empréstimos, seguindo o padrão MVC e utilizando banco de dados em memória (H2).
 
