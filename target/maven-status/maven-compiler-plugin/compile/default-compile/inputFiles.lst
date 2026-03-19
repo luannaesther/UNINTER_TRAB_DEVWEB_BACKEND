@@ -1,7 +1,10 @@
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\controller\LivroController.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\model\Emprestimo.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\controller\EmprestimoController.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\repository\EmprestimoRepository.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\BibliotecaApplication.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\model\Livro.java
-C:\Users\luanv\Documents\UNINTER\TRAB_DEV_WEB_BACKEND\src\main\java\br\com\biblioteca\repository\LivroRepository.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/repository/LivroRepository.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/repository/EmprestimoRepository.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/model/Emprestimo.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/controller/LivroController.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/model/Cliente.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/BibliotecaApplication.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/repository/ClienteRepository.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/controller/ClienteController.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/model/Livro.java
+/workspaces/UNINTER_TRAB/src/main/java/br/com/biblioteca/controller/EmprestimoController.java
